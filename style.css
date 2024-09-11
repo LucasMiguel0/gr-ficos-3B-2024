@@ -12,6 +12,18 @@
 body{
     background-color: var(--bg-color);/*cor de fundo*/
     color: var(--primary-color);/*cor da fonte*/
-    
+    font-family: var(--font);/*estilo de fonte*/
+    height: 100vh;/*faz com que o elemento ocupe 100% da altura da janela do navegador*/
+    margin: 0;/*margem*/
+}
 
+header{
+    background-color: var(--secondary-color);/*cor de fundo*/
+    text-align: center;/*Alinhamento do texto ao centro*/
+}
+
+h1{
+    font-size: 2rem;/*tamanho da fonte*/
+    color: var(--bg-color);/*cor de fundo*/
+    font-weight: 700;/*peso da fonte*/
 }
