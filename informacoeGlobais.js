@@ -10,7 +10,13 @@ async function visualizarInformacoesGlobais(params) {
     const dados = await res.json();//espera as reposta erem convertidas em JSON
 console.log(dados);//visualizar as informações no console
 const paragrafo=document.createElement('p');//criar um elemento de parágrafo
+
 paragrafo.classList.add('graficos-container__texto');//adiciona uma classe do CSS ao parágrafo
-paragrafo.innerHTML = `Você sabia que o mundo tem ${dados.total_pessoas_mundo}`//Insere o texto"Você sabia que o mundo tem"+total_pessoas_mundo
+
+paragrafo.innerHTML = `Você sabia que o mundo tem ${dados.total_pessoas_mundo} de pessoas e que aproximadamente ${dados.total_pessoas_conectadas}
+estão conectadas em alguma rede social e passam em média ${dados.tempo_medio} horas conectadas.`//Insere o texto "Você sabia que o mundo tem"+total_pessoas_mundo
+ 
+const container=document.getElementById('graficos-container');//cria a variável "container", seleciona o ID(graficos-container) na section do HTML
+container.appendChild(paragrafo);//Insere o parágrafo dentro do "container"
 }
 visualizarInformacoesGlobais();//chama a função
