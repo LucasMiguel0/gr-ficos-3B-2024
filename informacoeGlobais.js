@@ -12,6 +12,7 @@ async function visualizarInformacoesGlobais(params) {
     const pessoasNoMundo=(dados.total_pessoas_mundo/1e9)//Cria a variável pessoasNoMundo, sendo o total_pessoas_mundo por um bilhao
     const horas = parseInt(dados.tempo_medio)//Cria uma variável que utiliza apenas a parte inteira do número
     const minutos = Math.round*(dados.tempo_medio - horas) * 60);//Cria uma variável que utiliza só a parte decimal das horas, transforma em minutos e arredonda
+    const porcentagemConectada = (pessoasConectadas*100/pessoasNoMundo).toFixed(2);//Cria uma variável que calcula o percentual de pessoas conectadas no mundo e arredonda para duas casas decimais
 
 console.log(dados);//visualizar as informações no console
 const paragrafo=document.createElement('p');//criar um elemento de parágrafo
@@ -19,7 +20,8 @@ const paragrafo=document.createElement('p');//criar um elemento de parágrafo
 paragrafo.classList.add('graficos-container__texto');//adiciona uma classe do CSS ao parágrafo
 
 paragrafo.innerHTML = `Você sabia que o mundo tem <span>${dados.pessoasNoMundo} bilhões </span> de pessoas e que aproximadamente <span>${dados.pessoasConectadas} bilhões</span>
-estão conectadas em alguma rede social e passam em média <span>${dados.horas} horas e ${minutos} minutos</span> horas conectadas.`//Insere o texto "Você sabia que o mundo tem"+total_pessoas_mundo
+estão conectadas em alguma rede social e passam em média <span>${horas} horas </span> e <span>${minutos} minutos</span>conectadas.<br>
+Isso significa que há aproximadamente <span>${porcentagemConectada}%</span> de pessoas estão conectadas em alguma rede social`//Insere o texto "Você sabia que o mundo tem"+total_pessoas_mundo
  
 const container=document.getElementById('graficos-container');//cria a variável "container", seleciona o ID(graficos-container) na section do HTML
 container.appendChild(paragrafo);//Insere o parágrafo dentro do "container"
