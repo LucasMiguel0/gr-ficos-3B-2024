@@ -15,7 +15,7 @@ async function visualizarInformacoesGlobais(params) {
     const porcentagemConectada = (pessoasConectadas*100/pessoasNoMundo).toFixed(2);//Cria uma variável que calcula o percentual de pessoas conectadas no mundo e arredonda para duas casas decimais
 
 console.log(dados);//visualizar as informações no console
-const paragrafo=document.createElement('p');//criar um elemento de parágrafo
+const paragrafo=d ocument.createElement('p');//criar um elemento de parágrafo
 
 paragrafo.classList.add('graficos-container__texto');//adiciona uma classe do CSS ao parágrafo
 

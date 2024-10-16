@@ -10,6 +10,7 @@ async function quantidadeUsuarios() {
             x: nomeDasRedes,
             y: quantidadeDeUsuarios,
             type:'bar'
+            marker:{color:getComputedStyle(document.body).getPropertyValue('--primary-color')}
         }
     ]
       const grafico = document.createElement('div')
