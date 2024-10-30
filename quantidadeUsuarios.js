@@ -1,4 +1,4 @@
-import { getCSS } from "./common"
+import { getCSS } from "./common.js"
 
 async function quantidadeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
@@ -38,6 +38,7 @@ xaxis:{
     },
 },
 yaxis:{
+    tickfont:
     title{text:''}
 }
     }
