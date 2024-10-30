@@ -11,7 +11,7 @@ async function visualizarInformacoesGlobais(params) {
     const pessoasConectadas = (dados.total_pessoas_conectadas/1e9)//Cria a variável pessoasConectadas, sendo o total_pessoas_conectadas por um bilhão
     const pessoasNoMundo=(dados.total_pessoas_mundo/1e9)//Cria a variável pessoasNoMundo, sendo o total_pessoas_mundo por um bilhao
     const horas = parseInt(dados.tempo_medio)//Cria uma variável que utiliza apenas a parte inteira do número
-    const minutos = Math.round*(dados.tempo_medio - horas) * 60);//Cria uma variável que utiliza só a parte decimal das horas, transforma em minutos e arredonda
+    const minutos = Math.round*(dados.tempo_medio - horas) * 60;//Cria uma variável que utiliza só a parte decimal das horas, transforma em minutos e arredonda
     const porcentagemConectada = (pessoasConectadas*100/pessoasNoMundo).toFixed(2);//Cria uma variável que calcula o percentual de pessoas conectadas no mundo e arredonda para duas casas decimais
 
 console.log(dados);//visualizar as informações no console
